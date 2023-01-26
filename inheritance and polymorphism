@@ -1,0 +1,223 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package boss;
+
+/**
+ *
+ * @author USER
+ */
+
+class Mathis {
+    private int a;
+    private int b;
+    Mathis(int a,int b){
+    this.a=a;
+    this.b=b;
+}
+    
+    public void setA(int x){
+        a=x;
+    }
+    public int getA(){
+        return b;
+    }
+    public void setB(int y){
+        b=y;
+    }
+    public int getB(){
+        return b;
+    }
+    
+}
+
+class calculator extends Mathis{
+    calculator(int a,int b){
+        super(a,b);
+}
+    public int  displaysum(){
+        int sum=getA()+getB();
+        return sum;
+    }
+    
+    public int displaydiff(){
+        int diff=getA()-getB();
+        return diff;
+    }
+    public int displaymul(){
+        int mul=getA()*getB();
+    return mul;}
+    public int displaydiv(){
+        int div=getA()|getB();
+        return div;
+    }
+}
+
+
+
+
+
+
+
+class student{
+    private String name;
+    private String id;
+    student(String name,String id){
+        this.name=name;
+        this.id=id;
+    }
+public void setname(String humed){
+    name=humed;
+}
+public String getname(){
+    return name;
+}
+public void setid(String juru){
+    id=juru;
+}
+public String getid(){
+    return id;
+    
+    
+        
+    
+}
+}
+
+class cstudent extends student {
+    cstudent(String name,String id){
+        super(name,id);
+    }
+    public String  getall(){
+        System.out.println(getname());
+        System.out.println(getid());
+        
+        return getname()+"     " +  getid();
+    }
+    
+}
+
+
+
+
+
+
+ 
+
+class Animals{
+    public void makenois(){
+        System.out.println("some sound");}
+}
+class dog extends Animals{
+    public void makenois(){
+        System.out.println("bark");
+    }
+}
+class cat extends Animals{
+    public void makenois(){
+        System.out.println("meawoo");
+        
+    }
+    }
+
+class Area {
+    public void area(){
+        System.out.println("area is area");
+    }
+    
+}
+class rectangle extends Area{
+   @Override
+    public void area(){
+        double l=3.4,a;
+        
+        a=l*l;
+        System.out.println(a);
+}}
+
+
+
+
+
+
+abstract class myclass{
+    public static  void disp(){
+        System.out.println("my name is humed abahaba ");
+    }
+    
+    public  abstract void disp2();
+        
+    
+}
+class myabstract extends myclass{
+    public void disp2(){
+    
+    
+    System.out.println("my father name is abahaba");
+}}
+
+
+interface mussa{
+    public void abahaba();
+}
+
+class humed implements mussa{
+    public void abahaba(){
+        System.out.println("humed abahaba mussa");
+    }}
+
+
+
+
+
+public class Boss {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        calculator c=new calculator(6,5);
+        System.out.println("the sum of a and b is ...."+c.displaysum());
+        System.out.println("the difference of a and b.."+c.displaydiff());
+        System.out.println("multipilicationof a and b .."+c.displaymul());
+        System.out.println("the division of a and b....."+c.displaydiv());
+        
+        
+        
+        
+        cstudent s=new cstudent("humed","0358");
+                System.out.println(s.getall());
+                
+                
+                
+                Animals a1=new dog();
+                a1.makenois();
+                Animals a2=new cat();
+                a2.makenois();
+                Animals a3=new Animals();
+                a3.makenois();
+                
+                
+                
+                myabstract m=new myabstract();
+                m.disp2();
+                m.disp();
+                
+                myclass.disp();
+                
+                rectangle r=new rectangle();
+                r.area();
+                Area A=new Area();
+                A.area();
+                
+                
+                humed h=new humed();
+                h.abahaba();
+                
+        // TODO code application logic here
+    }
+    
+}
